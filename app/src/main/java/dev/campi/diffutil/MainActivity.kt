@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var adapter: CustomAdapter
 
-//    private val viewModel: MainViewModel by viewModels()
+    private val viewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,13 +21,13 @@ class MainActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
-//        binding.lifecycleOwner = this
-//        binding.viewmodel = viewModel
+        binding.lifecycleOwner = this
+        binding.viewmodel = viewModel
 
         adapter = CustomAdapter(listener)
 
         binding.rvMain.adapter = adapter
-        adapter.submitList(Objeto.listaDeCuatro)
+//        adapter.submitList(Objeto.listaDeCuatro)
     }
 
     private val listener = CustomAdapter.OnMensajeClic { obj, view ->

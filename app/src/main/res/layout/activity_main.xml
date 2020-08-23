@@ -23,9 +23,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            app:listData="@{viewmodel.lista}"
             tools:listitem="@layout/item_view" />
 
-<!--            app:listData="@{viewmodel.lista}"-->
         <!--    DEBIDO A UN BUG PARA LINEAR LAYOUT MANAGER SE HACE CON GRID DE ESTA MANERA
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="1"
